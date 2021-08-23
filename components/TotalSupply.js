@@ -6,13 +6,14 @@ import Minter from '../src/artifacts/contracts/Minter.sol/Minter.json'
 export default function TotalSupply() {
     // UI state
     const [loading, setLoading] = useState(true)
-    const [totalSupply, setTotalSupply] = useState(0)
+    const [totalMinted, setTotalMinted] = useState(0)
+    const [totalValue, setTotalValue] = useState(0)
 
     // Constants
     const TOTAL = 10000;
 
     useEffect( function() {
-        async function fetchTotalSupply() {
+        async function fetchTotals() {
             if(! hasEthereum()) {
                 console.log('Install MetaMask')
                 setLoading(false)
@@ -20,10 +21,11 @@ export default function TotalSupply() {
             }
     
             await getTotalSupply()
+            await getTotalValue()
         
             setLoading(false)
         }
-        fetchTotalSupply();
+        fetchTotals();
     });
 
     // Get total supply of tokens from smart contract
@@ -34,13 +36,32 @@ export default function TotalSupply() {
           const contract = new ethers.Contract(process.env.NEXT_PUBLIC_MINTER_ADDRESS, Minter.abi, provider)
           const data = await contract.totalSupply()
       
-          setTotalSupply( data.toNumber() );
+          setTotalMinted(data.toNumber());
+        } catch(error) {
+            console.log(error)
+        }
+    }
+
+     // Get total value collected by the smart contract
+     async function getTotalValue() {
+        try {
+          // Interact with contract
+          const provider = new ethers.providers.Web3Provider(window.ethereum)
+          const contract = new ethers.Contract(process.env.NEXT_PUBLIC_MINTER_ADDRESS, Minter.abi, provider)
+          const data = await contract.getBalance()
+      
+          setTotalValue(ethers.utils.formatEther(data).toString());
         } catch(error) {
             console.log(error)
         }
     }
 
     return (
-        <p>Tokens minted: { loading ? 'Loading...' : `${totalSupply}/${TOTAL}` }</p>
+        <>
+            <p>
+                Tokens minted: { loading ? 'Loading...' : `${totalMinted}/${TOTAL}` }<br />
+                Contract value: { loading ? 'Loading...' : `${totalValue}ETH` }
+            </p>
+        </>
     )
 }

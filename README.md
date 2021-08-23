@@ -92,9 +92,7 @@ Basic tests can be found in `test/Minter.test.js`.
 
 ## Roadmap
 
-- List NFTs from smart contract of the current address
-- Show all NFTs minted from the smart contract by any address
-- Show the funds collected by the smart contract through minting
+- Show the funds available in the connected account's wallet
 - Add advanced (ownable) functionality to the contract for selling NFTs
 - - Reserve tokens
 - - Flip sale state
