@@ -5,6 +5,7 @@ import { hasEthereum } from '../utils/ethereum'
 import Minter from '../src/artifacts/contracts/Minter.sol/Minter.json'
 import TotalSupply from '../components/TotalSupply'
 import Wallet from '../components/Wallet'
+import YourNFTs from '../components/YourNFTs'
 
 export default function Home() {
   // Constants
@@ -114,6 +115,7 @@ export default function Home() {
             </div>
           </>
         ) }
+        <YourNFTs />
       </main>
 
       <footer className="mt-20 text-center">
@@ -121,7 +123,7 @@ export default function Home() {
           href="https://github.com/tomhirst/solidity-nextjs-mint-starter/blob/main/README.md"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-700"
+          className="text-blue-600 hover:text-blue-700 mb-8 inline-block"
         >
           Read the docs
         </a>

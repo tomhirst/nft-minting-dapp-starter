@@ -11,7 +11,6 @@ export default function TotalSupply() {
     // Constants
     const TOTAL = 10000;
 
-    // First load
     useEffect( function() {
         async function fetchTotalSupply() {
             if(! hasEthereum()) {
