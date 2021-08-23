@@ -45,7 +45,7 @@ Then in a new terminal window, `npx hardhat run scripts/deploy.js --network loca
 If you're successful, you'll get something like the following CLI output:
 
 ```
-Greeter deployed to: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+Minter deployed to: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
 ```
 
 ### Adding A Local Account To MetaMask
