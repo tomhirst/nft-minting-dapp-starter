@@ -2,6 +2,8 @@
 
 This repo contains boilerplate code for minting NFTs from the client-side using [Solidity](https://soliditylang.org/), [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/).
 
+![Solidity + Next.js Mint Starter](/public/screenshot.png)
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
