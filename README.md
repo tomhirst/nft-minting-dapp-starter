@@ -98,12 +98,12 @@ Basic tests can be found in `test/Minter.test.js`.
 
 - Show the funds available in the connected account's wallet
 - Add common owner functionality to the contract
-- - Reserve tokens
-- - Flip sale state
-- - Set starting index
-- - Set base URI for asset metadata
-- - Set provenance hash
-- - Withdraw funds
+    - Reserve tokens
+    - Flip sale state
+    - Set starting index
+    - Set base URI for asset metadata
+    - Set provenance hash
+    - Withdraw funds
 - Attach image data to minted tokens with IPFS
 - Deploy to the Ropsten test network
 - Introduce code style rules and linting
