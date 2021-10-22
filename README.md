@@ -1,8 +1,10 @@
-# A full stack dApp starter for minting NFTs built on Ethereum (Solidity) with Next.js (React)
+# NFT Minting dApp Starter
+
+A full stack dApp starter for minting NFTs built on Ethereum (Solidity) with Next.js (React).
 
 This repo contains boilerplate code for minting NFTs from the client-side using [Solidity](https://soliditylang.org/), [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/).
 
-![Solidity + Next.js Mint Starter](/public/screenshot.png)
+![NFT Minting dApp Starter](/public/screenshot.png)
 
 ## Prerequisites
 
@@ -13,7 +15,7 @@ This repo contains boilerplate code for minting NFTs from the client-side using 
 
 ### Clone This Repo
 
-Use `git clone https://github.com/tomhirst/solidity-nextjs-mint-starter.git` to get the files within this repository onto your local machine.
+Use `git clone https://github.com/tomhirst/nft-minting-dapp-starter.git` to get the files within this repository onto your local machine.
 
 ### Environment Setup
 
@@ -68,7 +70,7 @@ In a new terminal window, load the front-end with `npm run dev`. If you want to 
 
 Once set up, go to `localhost:3000` (or whatever post number you used), to view your dApp in the browser.
 
-First, connect your wallet by clicking `Connect wallet`.
+First, connect your wallet by clicking `Connect wallet`. Ensure you're connected to the `Localhost 8454` network in your MetaMask extension. Select the wallet that you imported earlier.
 
 You can now test minting tokens, between 1 and 10 per transaction, by filling out the input with your desired amount and clicking the `Mint` button.
 
@@ -95,7 +97,7 @@ Basic tests can be found in `test/Minter.test.js`.
 ## Roadmap
 
 - Show the funds available in the connected account's wallet
-- Add advanced (ownable) functionality to the contract for selling NFTs
+- Add common owner functionality to the contract
 - - Reserve tokens
 - - Flip sale state
 - - Set starting index
@@ -104,4 +106,6 @@ Basic tests can be found in `test/Minter.test.js`.
 - - Withdraw funds
 - Attach image data to minted tokens with IPFS
 - Deploy to the Ropsten test network
+- Introduce code style rules and linting
+- Write more extensive tests
 - Create a TypeScript fork

@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div className="max-w-xl mt-36 mx-auto px-4">
       <Head>
-        <title>Solidity Next.js Mint Starter</title>
+        <title>NFT Minting dApp Starter</title>
         <meta name="description" content="Mint an NFT, or a number of NFTs, from the client-side." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -81,7 +81,7 @@ export default function Home() {
         ) : (
           <>
             <h1 className="text-4xl font-semibold mb-8">
-              Solidity Next.js Mint Starter
+              NFT Minting dApp Starter
             </h1>
             <TotalSupply />
             <div className="space-y-8">
